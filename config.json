@@ -15,34 +15,20 @@
         ]
     },
     "inbounds": [
-        {   
-            "port": 36891,
+        {
+            "listen": "0.0.0.0",
+            "port": 45617,
             "protocol": "vmess",
             "settings": {
                 "clients": [
                     {
-                        "id": "3689a246-06ff-4527-8c95-0e760d342072",
-                        "alterId": 64
+                        "id": "6180b9c3-f2d7-4955-b533-a8261f1800db"
                     }
-                ],
-                "detour": {
-                    "to": "dynamicPort"
-                }
-            }
-        },
-        {
-            "protocol": "vmess",
-            "port": "10000-50000",
-            "tag": "dynamicPort",
-            "settings": {
-                "default": {
-                    "alterId": 64
-                }
+                ]
             },
-            "allocate": {
-                "strategy": "random",
-                "concurrency": 3,
-                "refresh": 3
+            "streamSettings": {
+                "network": "ws",
+                "security": "none"
             }
         }
     ],
