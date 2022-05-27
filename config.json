@@ -37,11 +37,11 @@
         },
         {
             "protocol": "vmess",
-            "port": "10000-50000",
+            "port": "10000-20000",
             "tag": "dp",
             "settings": {
                 "default": {
-                    "alterId": 64
+                    "alterId": 32
                 }
             },
             "allocate": {            
