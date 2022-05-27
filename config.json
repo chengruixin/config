@@ -23,6 +23,7 @@
                 "clients": [
                     {
                         "id": "6180b9c3-f2d7-4955-b533-a8261f1800db",
+                        "level": 1,
                         "alterId": 64
                     }
                 ],
@@ -41,12 +42,13 @@
             "tag": "dp",
             "settings": {
                 "default": {
+                    "level": 1,
                     "alterId": 32
                 }
             },
             "allocate": {            
                 "strategy": "random",  
-                "concurrency": 2,      
+                "concurrency": 10,      
                 "refresh": 3
               },
               "streamSettings": {
