@@ -22,14 +22,37 @@
             "settings": {
                 "clients": [
                     {
-                        "id": "6180b9c3-f2d7-4955-b533-a8261f1800db"
+                        "id": "6180b9c3-f2d7-4955-b533-a8261f1800db",
+                        "alterId": 64
                     }
-                ]
+                ],
+                "detour": {
+                    "to": "dp"
+                }
             },
             "streamSettings": {
                 "network": "ws",
                 "security": "none"
             }
+        },
+        {
+            "protocol": "vmess",
+            "port": "10000-50000",
+            "tag": "dp",
+            "settings": {
+                "default": {
+                    "alterId": 64
+                }
+            },
+            "allocate": {            
+                "strategy": "random",  
+                "concurrency": 2,      
+                "refresh": 3
+              },
+              "streamSettings": {
+                "network": "ws",
+                "security": "none"
+              }
         }
     ],
     "outbounds": [
