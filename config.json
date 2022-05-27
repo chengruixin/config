@@ -1,23 +1,40 @@
 {
-        "inbounds": [
-                {
-                        "port": 36891,
-                        "protocol": "vmess",
-                        "settings": {
-                                "clients": [
-                                        {
-                                                "id": "73e5be08-62b2-4f11-b456-334958f5bf8e",
-                                                "alterId": 0
-                                        }
-                                ]
-                        }
+    "inbounds": [
+        {
+            "port": 36891,
+            "protocol": "vmess",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "3689a246-06ff-4527-8c95-0e760d342072",
+                        "alterId": 0
+                    }
+                ],
+                "detour": {
+                    "to": "dynamicPort"
                 }
-        ],
-        "outbounds": [
-                {
-                        "protocol": "freedom",
-                        "settings": {}
+            }
+        },
+        {
+            "protocol": "vmess",
+            "port": "2000-64000",
+            "tag": "dynamicPort",
+            "settings": {
+                "default": {
+                    "alterId": 64
                 }
-        ]
-
+            },
+            "allocate": {
+                "strategy": "random",
+                "concurrency": 3,
+                "refresh": 3
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom",
+            "settings": {}
+        }
+    ]
 }
