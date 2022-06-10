@@ -1,0 +1,18 @@
+.BlogCard {
+  background-color: rgba(230, 230, 230, 0.451);
+  border: 1px solid black;
+  border-radius: 4px;
+  width: 550px;
+  height: 100px;
+  word-wrap: break-word;
+  overflow: auto;
+  margin: 16px;
+  position: relative;
+  padding: 16px;
+}
+
+.BlogCard__CloseBtn {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+}
